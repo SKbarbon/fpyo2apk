@@ -46,7 +46,7 @@ def edit_an_exist_project():
     open(f"{project_name}/src/fpyo2apk/localhost.py", "w+", encoding="utf-8").write(The_localhost_py_script)
 
     print("Your app is being built and then opened on the iOS simulator..\nThis Usually take two minutes to finish, please wait..")
-    process = subprocess.Popen(["cd fpyo2apk\nbriefcase create Android\nbriefcase build Android\n"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
+    process = subprocess.Popen(["cd fpyo2apkdist\nbriefcase create Android\nbriefcase build Android\n"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
     output, error = process.communicate()
     if error != None:
         sys.exit(f"\nExit with Error: {error}")
