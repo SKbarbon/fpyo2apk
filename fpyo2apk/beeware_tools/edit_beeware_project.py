@@ -18,8 +18,8 @@ def edit_an_exist_project():
     if not os.path.isdir(f"{project_name}/src"):
         raise FileNotFoundError(f"There is no folder with path '{project_name}/src'.")
     
-    if not os.path.isdir(f"{project_name}/src/fpyo2apkdist/assets"):
-        os.mkdir(f"{project_name}/src/fpyo2apkdist/assets")
+    if not os.path.isdir(f"{project_name}/src/fpyo2apk/assets"):
+        os.mkdir(f"{project_name}/src/fpyo2apk/assets")
     
     if not os.path.isdir("dist"):
         raise FileNotFoundError("There must be a flet-pyodide folder called `dist` to start.")
@@ -35,18 +35,18 @@ def edit_an_exist_project():
     open("dist/index.html", "w+", encoding="utf-8").write(the_index_file)
 
     print("copy the dist..")
-    if os.path.isdir(f"{project_name}/src/fpyo2apkdist/assets/dist"):
-        shutil.rmtree(f"{project_name}/src/fpyo2apkdist/assets/dist")
-    shutil.copytree("dist", f"{project_name}/src/fpyo2apkdist/assets/dist")
+    if os.path.isdir(f"{project_name}/src/fpyo2apk/assets/dist"):
+        shutil.rmtree(f"{project_name}/src/fpyo2apk/assets/dist")
+    shutil.copytree("dist", f"{project_name}/src/fpyo2apk/assets/dist")
 
     print("start edit the 'app.py' file")
-    open(f"{project_name}/src/fpyo2apkdist/app.py", "w+", encoding="utf-8").write(The_app_py_script)
+    open(f"{project_name}/src/fpyo2apk/app.py", "w+", encoding="utf-8").write(The_app_py_script)
 
     print("start creating/editing the 'localhost.py' file")
-    open(f"{project_name}/src/fpyo2apkdist/localhost.py", "w+", encoding="utf-8").write(The_localhost_py_script)
+    open(f"{project_name}/src/fpyo2apk/localhost.py", "w+", encoding="utf-8").write(The_localhost_py_script)
 
     print("Your app is being built and then opened on the iOS simulator..\nThis Usually take two minutes to finish, please wait..")
-    process = subprocess.Popen(["cd fpyo2apkdist\nbriefcase create Android\nbriefcase build Android\n"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
+    process = subprocess.Popen(["cd fpyo2apk\nbriefcase create Android\nbriefcase build Android\n"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
     output, error = process.communicate()
     if error != None:
         sys.exit(f"\nExit with Error: {error}")
