@@ -45,7 +45,7 @@ def edit_an_exist_project():
     print("start creating/editing the 'localhost.py' file")
     open(f"{project_name}/src/fpyo2apk/localhost.py", "w+", encoding="utf-8").write(The_localhost_py_script)
 
-    print("Your app is being built and then opened on the iOS simulator..\nThis Usually take two minutes to finish, please wait..")
+    print("Your app is being built and then can open it on the android simulator..\nThis Usually take two minutes to finish, please wait..")
     process = subprocess.Popen(["cd fpyo2apkdist\nbriefcase create Android\nbriefcase build Android\n"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
     output, error = process.communicate()
     if error != None:
@@ -54,9 +54,9 @@ def edit_an_exist_project():
     print("""
 
 All work done!
-Your app is in the `fpyo2apkdist/build/fpyo2apkdist/Android/`!
+Your app is in the `fpyo2apkdist/build/fpyo2apkdist/android/`!
 To run a simulator, use:
-$ cd pyo2ipadist
+$ cd fpyo2apkdist
 $ briefcase run Android
 
     """)
