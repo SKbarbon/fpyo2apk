@@ -1,0 +1,3 @@
+include fpyo2apk/
+include fpyo2apk/assets/*
+include fpyo2apk/assets/pyo2apkdist.zip
