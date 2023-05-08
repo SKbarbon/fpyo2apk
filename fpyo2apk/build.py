@@ -11,10 +11,6 @@ if is_on_venv() == False:
     #? exit if not in venv.
     sys.exit("Exit: Please run this on a virtual environment. Run this command to create one: `python3 -m venv venv`")
 
-if is_it_mac() == False:
-    #? exit if the system is not mac.
-    sys.exit("Exit: Your system is not a mac, so it cant run this package.")
-
 
 #! important informations
 print("""
