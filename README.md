@@ -1,6 +1,8 @@
 # fpyo2apk
 A python package tool for create Android apps project for a `flet-pyodide` `dist` folder. Its very easy to use.
 
+For iOS/iPadOS ? [fpyo2ipa](https://github.com/SKbarbon/fpyo2ipa)
+
 ## requirements
 - python: up that python3.8
 - Android Studio: This is very important to make `briefcase` work.
