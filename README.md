@@ -6,6 +6,7 @@ For iOS/iPadOS ? [fpyo2ipa](https://github.com/SKbarbon/fpyo2ipa)
 ## requirements
 - python: up than python3.8
 - Android Studio: This is very important to make `briefcase` work.
+- briefcase==0.3.14 (it will be auto installed if you install this package)
 
 * `Note`: This package is tested on macOS only, but it should work on windows as will. if there is any issues report it here: [issue](https://github.com/SKbarbon/fpyo2apk/issues)
 
