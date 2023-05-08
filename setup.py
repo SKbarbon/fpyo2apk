@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fpyo2apk',
-    version='1.1.3',
+    version='1.1.4',
     author='SKbarbon',
     description='A package tool that allow you to built a python Android apps with flet-pyodide dist.',
     long_description="https://github.com/SKbarbon/fpyo2apk",
