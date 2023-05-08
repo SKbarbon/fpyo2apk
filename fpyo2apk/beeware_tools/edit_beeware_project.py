@@ -51,6 +51,9 @@ def edit_an_exist_project():
     if error != None:
         sys.exit(f"\nExit with Error: {error}")
     
+    if "Exec format error" in str(output):
+        sys.exit(f"Exit with Error: Its seems like you did not installed Android Studio so you have this error:\n{output}")
+    
     print("""
 
 All work done!
