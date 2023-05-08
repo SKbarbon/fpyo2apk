@@ -9,6 +9,9 @@ For iOS/iPadOS ? [fpyo2ipa](https://github.com/SKbarbon/fpyo2ipa)
 
 * `Note`: This package is tested on macOS only, but it should work on windows as will. if there is any issues report it here: [issue](https://github.com/SKbarbon/fpyo2apk/issues)
 
+## Little peek
+
+<img width="1728" alt="Screenshot 2023-05-08 at 8 20 22 PM" src="https://user-images.githubusercontent.com/86029286/236889277-7fef846a-102d-4f93-b0fb-1b4825d8a278.png">
 
 ## usage
 This is a video tutorial: [Tutorial](https://youtu.be/302AT_INDo8)
