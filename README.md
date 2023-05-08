@@ -4,7 +4,7 @@ A python package tool for create Android apps project for a `flet-pyodide` `dist
 For iOS/iPadOS ? [fpyo2ipa](https://github.com/SKbarbon/fpyo2ipa)
 
 ## requirements
-- python: up that python3.8
+- python: up than python3.8
 - Android Studio: This is very important to make `briefcase` work.
 
 * `Note`: This package is tested on macOS only, but it should work on windows as will. if there is any issues report it here: [issue](https://github.com/SKbarbon/fpyo2apk/issues)
