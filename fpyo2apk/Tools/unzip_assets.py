@@ -4,6 +4,10 @@ import shutil
 
 def Unzip_asset ():
     asset_path = str(__file__).replace("Tools/unzip_assets.py", "assets/fpyo2apkdist.zip")
+
+    if r"Tools\unzip_assets.py" in str(asset_path):
+        asset_path = str(asset_path).replace(r"Tools\unzip_assets.py", r"assets\fpyo2apkdist.zip")
+    
     if not os.path.isfile(asset_path):
         raise FileNotFoundError("Cannot found the assets.")
     

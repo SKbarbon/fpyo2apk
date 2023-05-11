@@ -39,27 +39,21 @@ def edit_an_exist_project():
         shutil.rmtree(f"{project_name}/src/fpyo2apk/assets/dist")
     shutil.copytree("dist", f"{project_name}/src/fpyo2apk/assets/dist")
 
-    print("start edit the 'app.py' file")
+    print("start edit the 'app.py' file..")
     open(f"{project_name}/src/fpyo2apk/app.py", "w+", encoding="utf-8").write(The_app_py_script)
 
-    print("start creating/editing the 'localhost.py' file")
+    print("start creating/editing the 'localhost.py' file..")
     open(f"{project_name}/src/fpyo2apk/localhost.py", "w+", encoding="utf-8").write(The_localhost_py_script)
 
-    print("Your app is being built and then can open it on the android simulator..\nThis Usually take two minutes to finish, please wait..")
-    process = subprocess.Popen(["cd fpyo2apkdist\nbriefcase create Android\nbriefcase build Android\n"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
-    output, error = process.communicate()
-    if error != None:
-        sys.exit(f"\nExit with Error: {error}")
-    
-    if "Exec format error" in str(output):
-        sys.exit(f"Exit with Error: Its seems like you did not installed Android Studio so you have this error:\n{output}")
-    
     print("""
 
-All work done!
-Your app is in the `fpyo2apkdist/build/fpyo2apkdist/android/`!
-To run a simulator, use:
+Your project has been created successfully!
+There are some problems with running brifcase commands automatically,
+so you will have to run them manually.
+
 $ cd fpyo2apkdist
+$ briefcase create Android
+$ briefcase build Android
 $ briefcase run Android
 
     """)
