@@ -1,4 +1,5 @@
 # fpyo2apk
+## This project is no longer maintaned. Please use the official way to distrebute flet apps 
 A python package tool for create Android apps project for a `flet-pyodide` `dist` folder. Its very easy to use.
 
 For iOS/iPadOS ? [fpyo2ipa](https://github.com/SKbarbon/fpyo2ipa)
